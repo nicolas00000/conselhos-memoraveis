@@ -31,8 +31,7 @@ body{
 }
 
 .autor{
-    background-color: red;
     display: flex;
-    color:gray;
+    color:rgb(105, 89, 89);
     justify-content: end;
 }
