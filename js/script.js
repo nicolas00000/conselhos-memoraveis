@@ -1,11 +1,12 @@
 
 //copiar mensagem
-document.querySelector(".copyCit").addEventListener("click" , ()=>{    
-    let txtCit = document.querySelector(".citacao").innerText
-    navigator.clipboard.writeText(txtCit)
+document.getElementById("copyCit").addEventListener("click" , ()=>{  
+    let autor =  document.querySelector("cite").innerText  
+    let txtCit = document.getElementById("citacao").innerText  
+    navigator.clipboard.writeText(`" ${txtCit} "   - ${autor}`)
 })
 
-document.querySelector(".copyConselho").addEventListener("click" , ()=>{    
+document.getElementById("copyConselho").addEventListener("click" , ()=>{    
     let txtCit = document.querySelector(".conselho").innerText
     navigator.clipboard.writeText(txtCit)
 })
@@ -13,7 +14,7 @@ document.querySelector(".copyConselho").addEventListener("click" , ()=>{
 
 
 //sotear um conselho
-document.querySelector(".sortCit").addEventListener("click", citacao)
+document.getElementById("sortCit").addEventListener("click", citacao)
 function citacao(){
     const maxPage = parseInt(Math.random() * (7000 - 1) + 1)
     axios.get(`https://quote-garden.herokuapp.com/api/v3/quotes?page=${maxPage}`)
@@ -32,39 +33,7 @@ function citacao(){
   }
 
 function imprimirMsg(text, autor){
-    document.querySelector(".citacao").innerHTML = text 
+    document.getElementById("citacao").innerHTML = text 
     document.querySelector("cite").innerHTML = autor
 }
 
-
-// const puppeteer = require('puppeteer')
-
-// const traduzMensagem = function (texto, autor){
-//     let apiGoogleTranslate = async () => {
-//         const browser = await puppeteer.launch()
-//         const page = await browser.newPage()
-      
-//         var url = `https://translate.google.com.br/?hl=en&sl=en&tl=pt&text=${(texto)}&op=translate`;
-//         await page.goto(url)
-//         await page.waitForTimeout(2000);
-        
-//         const result = await page.evaluate(() => {
-//           return document.getElementsByClassName('NqnNQd')[0].innerText;
-//         })
-      
-//         browser.close()
-//         return result
-//     }
-//     apiGoogleTranslate().then((value) => {
-//         try{
-//             console.log('Aqui está seu conselho: '+ ''+value+'. ツ')
-//         }catch(e){
-//             console.log(e)
-//             console.log('Desculpe ocorreu um erro. Solicite novamente um conselho')
-//         }
-
-//     })
-
-// }
-
-// module.exports = traduzMensagem;
