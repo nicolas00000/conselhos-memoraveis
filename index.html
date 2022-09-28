@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Conselhos</title>
+</head>
+<body >
+    <div class="row" >
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Um conselho</h5>
+              <p class="card-text text-center conselho"></p>
+              <a href="#" class="btn btn-primary copy copyConselho  ">copiar</a>
+              <a href="#" class="btn btn-primary random">sortear</a> 
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Uma citação</h5>
+              <p class="card-text text-center citacao"></p>
+              <p class="card-text autor">
+                  - <cite class="card-text"></cite>
+              </p>
+              <a href="#" class="btn btn-primary copy copyCit" >copiar</a>
+              <a href="#" class="btn btn-primary random sortCit">sortear</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</body>
+</html>
