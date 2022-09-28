@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(182, 190, 190);
+    display: flex;
+    height: 100vh;
+    align-items:center;
+    justify-content: center;
+}
+
+.row{
+    width: 80%;
+}
+
+.random{
+    position: absolute;
+    right: 20px;
+    font-weight: bold;
+}
+
+.copy{
+    background-color: rgba(128, 128, 128, 0.616);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.autor{
+    background-color: red;
+    display: flex;
+    color:gray;
+    justify-content: end;
+}
